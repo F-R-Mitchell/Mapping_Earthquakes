@@ -21,6 +21,16 @@ let baseMaps = {
   "Satellite Streets" : satelliteStreets
 };
 
+// Accessing the Toronto neighborhoods GeoJSON URL.
+let torontoHoods = "https://raw.githubusercontent.com/F-R-Mitchell/Mapping_Earthquakes/Mapping_GeoJSON_Polygons/torontoNeighborhoods.json"
+
+// Grabbing our GeoJSON data
+d3.json(torontoHoods).then(function(data){
+  console.log(data);
+  // Creating a GEOJSON layer with the retrieved data
+  L.geoJSON(data).addTo(map);
+})
+
 // Create the map object with center and zoom level
 let map = L.map("mapid", {
   center : [43.7,-79.3],
