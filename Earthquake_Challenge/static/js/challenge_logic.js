@@ -159,6 +159,8 @@ legend.onAdd = function() {
   });
   tectonicPlates.addTo(map)
 
+
+// Major Earthquakes
   d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson").then(function(data) {
 
     // This function returns the style data for each of the earthquakes we plot on
@@ -219,6 +221,6 @@ legend.onAdd = function() {
   })
 });
 
-// Major Earthquakes
+
 
 
